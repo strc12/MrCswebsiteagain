@@ -1,0 +1,26 @@
+<script>
+    const count = parseInt(prompt("How many numbers do you want to average?"));
+
+// Initialize a variable to store the sum of the numbers
+let sum = 0;
+
+// Use a loop to input the numbers and calculate the sum
+for (let i = 1; i <= count; i++) {
+  const input = parseFloat(prompt(`Enter number ${i}:`));
+  
+  // Check if the input is a valid number
+  if (!isNaN(input)) {
+    sum += input;
+  } else {
+    alert("Invalid input. Please enter a valid number.");
+    i--; // Decrement i to re-enter the current number
+  }
+}
+
+// Calculate the average
+const average = sum / count;
+
+// Display the result
+alert(`The average of ${count} numbers is: ${average}`);
+console.write(`The average of ${count} numbers is: ${average}`);
+</script>
